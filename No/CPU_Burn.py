@@ -36,10 +36,10 @@ if __name__ == '__main__':
     
     #Read arguments
     parser = argparse.ArgumentParser(description='Script to run very simple stress tests')
-    parser.add_argument('--cpu', dest='cpus', type=int, default=-1, help='number of CPU thread to stress (default: 1). Use -1 to stress all the CPUs')
+    parser.add_argument('--cpu', dest='cpus', type=int, default=6, help='number of CPU thread to stress (default: 1). Use -1 to stress all the CPUs')
     parser.add_argument('--time', dest='time', type=int, default=1800, help='Time for the test in seconds (default: 20)')
     parser.add_argument('--ram', dest='rams', type=int, default=0, help='Allocate RAM blocks of 1MB (default is 0).')
-    parser.add_argument('--ramp', dest='ramp', type=float, default=0.8, help='Allocate a given percent (in numbers between 0 and 1) of the total RAM (will override --ram command)')
+    parser.add_argument('--ramp', dest='ramp', type=float, default=0, help='Allocate a given percent (in numbers between 0 and 1) of the total RAM (will override --ram command)')
     parser.add_argument('--disk', dest='disk', type=int, default=0, help='Start a disk read/write workes (default is 0)')
     parser.add_argument('--disk-path', dest='diskp', type=str, action='append', help='disk read/write path to use (default is /tmp/). Multiple paths can be set.')
     parser.add_argument('--disk-blocks', dest='diskb', type=int, default=1, help='Disk read/write for a given number of 1MB blocks per worker')

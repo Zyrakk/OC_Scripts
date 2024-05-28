@@ -14,7 +14,7 @@ def cpu_load(work_time, rest_time, duration):
 
 # Parámetros
 num_cores = os.cpu_count()  # Obtiene el número de núcleos del sistema
-cpu_usage = 0.20
+cpu_usage = 0.50
 total_duration = 20  # 1 hora en segundos
 
 # Calculando tiempos de trabajo y descanso
