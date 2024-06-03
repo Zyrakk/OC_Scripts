@@ -6,7 +6,7 @@ import random
 direcciones = ["ping.online.net", "ping6.online.net", "ping-90ms.online.net", "ping6-90ms.online.net", "iperf3.moji.fr"]
 
 # Comando base
-command_base = "iperf3 -c {} -u -b 850M -t 1800"
+command_base = "iperf3 -c {} -b 900M -t 900"
 
 # Función para ejecutar el comando y detenerse en caso de éxito
 def execute_command(address):
@@ -40,3 +40,13 @@ while pending_addresses:
         pending_addresses.remove(address)
 
 print("Script finalizado.")
+
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5201 -j ACCEPT #
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5202 -j ACCEPT #
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5203 -j ACCEPT #
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5204 -j ACCEPT #
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5205 -j ACCEPT #
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5206 -j ACCEPT #
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5207 -j ACCEPT #
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5208 -j ACCEPT #
+# sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 5209 -j ACCEPT #
